@@ -3,6 +3,7 @@ import Stats from "@/components/Stats";
 import About from "@/components/About";
 import ProductGrid from "@/components/ProductGrid";
 import FeaturedProducts from "@/components/FeaturedProducts";
+import SolutionShowcase from "@/components/SolutionShowcase";
 import BrandSection from "@/components/BrandSection";
 import IndustrySection from "@/components/IndustrySection";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <ProductGrid />
       <FeaturedProducts />
+      <SolutionShowcase />
       <BrandSection />
       <IndustrySection />
       <WhyChooseUs />

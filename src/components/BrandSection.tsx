@@ -1,12 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { brands } from "@/data/brands";
 
 export default function BrandSection() {
   const [hovered, setHovered] = useState<number | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 10);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+    }
+    return () => {
+      el?.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, []);
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const amount = 320;
+    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
 
   return (
     <section className="py-20 bg-white relative overflow-hidden">
@@ -30,20 +60,52 @@ export default function BrandSection() {
           </p>
         </div>
 
-        {/* Brand Cards Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
-          {brands.map((brand, i) => (
-            <div
-              key={brand.slug}
-              className="group relative"
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <Link href={`/brands/${brand.slug}`} className="block">
-                <BrandCard brand={brand} i={i} hovered={hovered} />
-              </Link>
-            </div>
-          ))}
+        {/* Carousel Controls */}
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
+              canScrollLeft
+                ? "bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 cursor-pointer"
+                : "bg-gray-100 text-gray-300 cursor-not-allowed"
+            }`}
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
+              canScrollRight
+                ? "bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 cursor-pointer"
+                : "bg-gray-100 text-gray-300 cursor-not-allowed"
+            }`}
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Carousel */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2 py-4"
+          >
+            {brands.map((brand, i) => (
+              <div
+                key={brand.slug}
+                className="group relative flex-shrink-0 w-[280px]"
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <Link href={`/brands/${brand.slug}`} className="block">
+                  <BrandCard brand={brand} i={i} hovered={hovered} />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
@@ -72,19 +134,19 @@ function BrandCard({
 }) {
   return (
     <div
-      className={`relative bg-white rounded-2xl border overflow-hidden transition-all duration-500 ${
+      className={`relative bg-white rounded-2xl border overflow-hidden transition-all duration-500 h-full ${
         hovered === i
-          ? "border-accent/40 shadow-2xl shadow-accent/15 scale-[1.04]"
+          ? "border-accent/40 shadow-2xl shadow-accent/15 scale-[1.03]"
           : "border-gray-100 shadow-md hover:shadow-lg"
       }`}
     >
-      {/* Logo Image - Larger and clearer */}
+      {/* Logo Image */}
       <div className="relative h-48 overflow-hidden bg-gradient-to-br from-white via-surface to-white">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-700 p-4"
+        <img
+          src={brand.logo}
+          alt={`${brand.name} Logo`}
+          className="absolute inset-0 w-full h-full object-contain p-4 transition-all duration-700"
           style={{
-            backgroundImage: `url('${brand.logo}')`,
-            filter: "none",
             opacity: hovered === i ? 1 : 0.9,
             transform: hovered === i ? "scale(1.08)" : "scale(1)",
           }}

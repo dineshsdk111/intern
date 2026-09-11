@@ -649,7 +649,7 @@ export const boschBrandInfo = {
   founded: "1886",
   headquarters: "Gerlingen, Stuttgart, Germany",
   website: "https://www.bosch-professional.com",
-  logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect fill='%23003DA5' width='200' height='60' rx='4'/%3E%3Ctext x='100' y='38' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-size='28' font-weight='bold'%3EBOSCH%3C/text%3E%3C/svg%3E",
+  logo: "/images/brands/bosch.svg",
   specialties: [
     "Cordless Power Tools",
     "Rotary Hammers",

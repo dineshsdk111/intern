@@ -104,6 +104,22 @@ const featured = [
       "Emergency Stop & Safety Valves",
     ],
   },
+  {
+    name: "Fire Evacuation Plan",
+    model: "FEP-SOL",
+    specs: "Safety | Compliance | Training | Signage | Drills",
+    image: "/images/solutions/fire-evacuation-plan.png",
+    description:
+      "Comprehensive fire evacuation planning and safety solutions for industrial facilities, ensuring regulatory compliance, employee safety and emergency preparedness.",
+    features: [
+      "Fire Evacuation Route Planning",
+      "Emergency Assembly Point Design",
+      "Fire Safety Signage & Labels",
+      "Fire Extinguisher Placement Strategy",
+      "Employee Safety Training Programs",
+      "Regular Drill Scheduling & Audits",
+    ],
+  },
 ];
 
 export default function FeaturedProducts() {

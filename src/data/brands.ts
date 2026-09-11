@@ -40,6 +40,14 @@ export const brands: Brand[] = [
     logo: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b9.png",
     specialty: "Torque Wrenches",
   },
+  {
+    name: "Bosch",
+    tagline: "Invented for Life",
+    description: "Professional construction tools and power tool systems built for demanding industrial and jobsite applications.",
+    slug: "bosch",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Bosch_logo_%282018%29.svg/1200px-Bosch_logo_%282018%29.svg.png",
+    specialty: "Construction Tools",
+  },
 ];
 
 export const industries = [

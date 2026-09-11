@@ -4,7 +4,7 @@ import BrandsPageContent from "@/components/BrandsPageContent";
 export const metadata: Metadata = {
   title: "Our Brands",
   description:
-    "Explore the trusted brands we partner with - APEX Tools, ProTorque, HydroMax, AirForce Industrial and more.",
+    "Explore the trusted industrial brands we partner with - Makita, Chicago Pneumatic, Endo Kogyo and Tohnichi.",
 };
 
 export default function BrandsPage() {

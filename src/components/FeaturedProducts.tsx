@@ -88,6 +88,22 @@ const featured = [
       "Torque Monitoring & Data Collection",
     ],
   },
+  {
+    name: "Pneumatic Accessories & Fittings",
+    model: "PNEU-ACC",
+    specs: "Couplings | Connectors | Hoses | FRL Units | Air Line",
+    image: "/images/solutions/pneumatic-accessories-fittings.jpg",
+    description:
+      "Complete range of pneumatic accessories and fittings including quick couplings, push-in connectors, air hoses, FRL units and air line management systems for industrial compressed air applications.",
+    features: [
+      "Quick Release Couplings (Universal & Profile)",
+      "Push-In Pneumatic Connectors",
+      "Air Hoses & Reinforced Tubing",
+      "FRL Units (Filter, Regulator, Lubricator)",
+      "Manifold & Distribution Blocks",
+      "Emergency Stop & Safety Valves",
+    ],
+  },
 ];
 
 export default function FeaturedProducts() {
@@ -107,7 +123,7 @@ export default function FeaturedProducts() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((item) => (
             <div
               key={item.model}

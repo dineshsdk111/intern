@@ -30,7 +30,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Impact Wrenches",
         description: "1/2\" drive heavy-duty composite impact wrench with extreme torque and durability for demanding applications.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "/images/chicago-pneumatic/cp7748.png",
         features: [
           "1/2\" square drive",
           "Composite housing for durability",

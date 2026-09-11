@@ -121,6 +121,7 @@ const featured = [
       "Employee Safety Training Programs",
       "Regular Drill Scheduling & Audits",
     ],
+    nameOnly: true,
   },
 ];
 

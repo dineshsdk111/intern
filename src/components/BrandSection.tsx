@@ -2,40 +2,54 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { brands } from "@/data/brands";
 
 export default function BrandSection() {
   const [hovered, setHovered] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const animationRef = useRef<number | null>(null);
+  const scrollPosRef = useRef(0);
+  const speed = 1;
 
-  const checkScroll = () => {
-    const el = scrollRef.current;
-    if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 10);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
-  };
+  // Duplicate brands for seamless loop
+  const duplicatedBrands = [...brands, ...brands, ...brands];
 
   useEffect(() => {
-    checkScroll();
-    const el = scrollRef.current;
-    if (el) {
-      el.addEventListener("scroll", checkScroll);
-      window.addEventListener("resize", checkScroll);
-    }
-    return () => {
-      el?.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
-    };
-  }, []);
-
-  const scroll = (dir: "left" | "right") => {
     const el = scrollRef.current;
     if (!el) return;
-    const amount = 320;
-    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+
+    const totalWidth = el.scrollWidth / 3;
+
+    const animate = () => {
+      if (!isPaused && el) {
+        scrollPosRef.current += speed;
+        if (scrollPosRef.current >= totalWidth) {
+          scrollPosRef.current = 0;
+        }
+        el.scrollLeft = scrollPosRef.current;
+      }
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused]);
+
+  const handleMouseEnter = (i: number) => {
+    setHovered(i);
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(null);
+    setIsPaused(false);
   };
 
   return (
@@ -60,30 +74,48 @@ export default function BrandSection() {
           </p>
         </div>
 
-        {/* Carousel Controls */}
+        {/* Auto-scrolling Carousel */}
         <div className="relative">
+          {/* Pause/Play Button */}
+          <button
+            onClick={() => setIsPaused(!isPaused)}
+            className="absolute right-0 top-0 z-10 flex items-center gap-2 px-3 py-1.5 text-xs font-semibold text-text-secondary hover:text-navy transition-colors bg-surface rounded-full border border-gray-200"
+          >
+            {isPaused ? (
+              <>
+                <Play className="w-3 h-3" /> Resume
+              </>
+            ) : (
+              <>
+                <Pause className="w-3 h-3" /> Pause
+              </>
+            )}
+          </button>
+
           {/* Left Arrow */}
           <button
-            onClick={() => scroll("left")}
-            disabled={!canScrollLeft}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-              canScrollLeft
-                ? "bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 cursor-pointer"
-                : "bg-gray-100 text-gray-300 cursor-not-allowed"
-            }`}
+            onClick={() => {
+              setIsPaused(true);
+              if (scrollRef.current) {
+                scrollRef.current.scrollLeft -= 320;
+                scrollPosRef.current = scrollRef.current.scrollLeft;
+              }
+            }}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-11 h-11 rounded-full bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
           {/* Right Arrow */}
           <button
-            onClick={() => scroll("right")}
-            disabled={!canScrollRight}
-            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-              canScrollRight
-                ? "bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 cursor-pointer"
-                : "bg-gray-100 text-gray-300 cursor-not-allowed"
-            }`}
+            onClick={() => {
+              setIsPaused(true);
+              if (scrollRef.current) {
+                scrollRef.current.scrollLeft += 320;
+                scrollPosRef.current = scrollRef.current.scrollLeft;
+              }
+            }}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-11 h-11 rounded-full bg-white hover:bg-navy hover:text-white text-navy border border-gray-200 shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -91,14 +123,15 @@ export default function BrandSection() {
           {/* Carousel */}
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2 py-4"
+            className="flex gap-6 overflow-hidden px-2 py-4"
+            style={{ maskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)" }}
           >
-            {brands.map((brand, i) => (
+            {duplicatedBrands.map((brand, i) => (
               <div
-                key={brand.slug}
+                key={`${brand.slug}-${i}`}
                 className="group relative flex-shrink-0 w-[280px]"
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
+                onMouseEnter={() => handleMouseEnter(i)}
+                onMouseLeave={handleMouseLeave}
               >
                 <Link href={`/brands/${brand.slug}`} className="block">
                   <BrandCard brand={brand} i={i} hovered={hovered} />

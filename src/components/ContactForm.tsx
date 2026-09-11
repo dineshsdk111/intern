@@ -97,7 +97,15 @@ export default function ContactForm() {
               <div className="text-center text-text-muted">
                 <MapPin className="w-10 h-10 mx-auto mb-2 opacity-50" />
                 <p className="text-sm font-medium">Google Maps</p>
-                <p className="text-xs">Ambattur, Chennai</p>
+                <p className="text-xs">39/A Indira Nagar, Ambattur</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=39%2FA+Indira+Nagar%2C+Ambattur%2C+Chennai+600053"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block mt-2 text-xs font-semibold text-accent hover:text-accent-hover transition-colors"
+                >
+                  Open in Google Maps
+                </a>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const quickLinks = [
@@ -28,11 +29,20 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block mb-4">
-              <div className="text-2xl font-extrabold tracking-tight">Toollink</div>
-              <div className="text-[10px] font-medium text-white/60 tracking-widest uppercase">
-                Enterprises
-              </div>
+            <Link href="/" className="inline-flex items-center gap-2 mb-4">
+              <Image
+                src="/toollink-logo.svg"
+                alt="Toollink Enterprises logo"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <span className="flex flex-col">
+                <span className="text-2xl font-extrabold tracking-tight">Toollink</span>
+                <span className="text-[10px] font-medium text-white/60 tracking-widest uppercase">
+                  Enterprises
+                </span>
+              </span>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
               Powering Industry with Precision & Reliability.

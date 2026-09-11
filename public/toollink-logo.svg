@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Toollink Enterprises logo</title>
+  <desc id="desc">Red circular Toollink Enterprises monogram</desc>
+  <circle cx="128" cy="128" r="112" fill="none" stroke="#f10d12" stroke-width="25"/>
+  <path fill="#f10d12" d="M54 70h148v31h-59v86h-31v-86H54V70zm91 42h59v30h-59v-30zm0 39h30l-56 52h-31l57-52zm0 0h30v52h-30v-52z"/>
+</svg>

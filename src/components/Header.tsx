@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
@@ -75,12 +76,21 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-tight">
-            <span className="text-xl lg:text-2xl font-extrabold text-navy tracking-tight">
-              Toollink
-            </span>
-            <span className="text-[10px] lg:text-xs font-medium text-charcoal-light tracking-widest uppercase">
-              Enterprises
+          <Link href="/" className="flex items-center gap-2 leading-tight">
+            <Image
+              src="/toollink-logo.svg"
+              alt="Toollink Enterprises logo"
+              width={40}
+              height={40}
+              className="w-9 h-9 lg:w-10 lg:h-10"
+            />
+            <span className="flex flex-col">
+              <span className="text-xl lg:text-2xl font-extrabold text-navy tracking-tight">
+                Toollink
+              </span>
+              <span className="text-[10px] lg:text-xs font-medium text-charcoal-light tracking-widest uppercase">
+                Enterprises
+              </span>
             </span>
           </Link>
 

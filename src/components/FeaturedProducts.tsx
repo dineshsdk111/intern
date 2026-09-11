@@ -143,16 +143,19 @@ export default function FeaturedProducts() {
           {featured.map((item) => (
             <div
               key={item.model}
-              onClick={() => setSelected(item)}
-              className="product-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden group cursor-pointer hover:shadow-md transition-shadow"
+              className="product-card bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden group hover:shadow-md transition-shadow"
             >
-              <div className="relative aspect-square overflow-hidden bg-surface">
+              <div
+                className="relative aspect-square overflow-hidden bg-surface cursor-pointer"
+                onClick={() => setSelected(item)}
+              >
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{ backgroundImage: `url('${item.image}')` }}
                 />
-                <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/10 transition-colors duration-300 flex items-center justify-center">
-                  <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 text-navy text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="bg-white/95 text-navy text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1 shadow-lg">
                     View Details <ChevronRight className="w-3 h-3" />
                   </span>
                 </div>
@@ -167,10 +170,18 @@ export default function FeaturedProducts() {
                 <p className="text-sm text-text-secondary leading-relaxed mb-4">
                   {item.specs}
                 </p>
-                <button className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-navy text-white text-sm font-semibold rounded-lg hover:bg-navy-light transition-colors">
-                  <Mail className="w-4 h-4" />
-                  Send Enquiry
-                </button>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setSelected(item)}
+                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 border-2 border-navy text-navy text-sm font-semibold rounded-lg hover:bg-navy hover:text-white transition-colors"
+                  >
+                    View Details
+                  </button>
+                  <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 bg-navy text-white text-sm font-semibold rounded-lg hover:bg-navy-light transition-colors">
+                    <Mail className="w-4 h-4" />
+                    Send Enquiry
+                  </button>
+                </div>
               </div>
             </div>
           ))}

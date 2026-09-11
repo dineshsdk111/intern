@@ -14,7 +14,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Spring Balancers",
         subcategory: "Standard",
         description: "Compact and lightweight spring balancer ideal for suspending electric screwdrivers and similar devices.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/spring/product/erp/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/ek/ek_670_400.png",
         features: [
           "Capacity 0.3-2.0 kg",
           "Nylon rope construction",
@@ -38,7 +38,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Spring Balancers",
         subcategory: "Heavy-Duty",
         description: "Industrial spring balancer for heavier tools and equipment with large capacity range.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/spring/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/ew/ew_670_400.png",
         features: [
           "Capacity 1.0-30.0 kg",
           "Steel wire rope",
@@ -62,7 +62,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Spring Balancers",
         subcategory: "Food Grade",
         description: "Unpainted spring balancer with food-grade grease for food processing and pharmaceutical applications.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/spring/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/ewf/ewf01_670_400.png",
         features: [
           "NSF H1 food-grade grease",
           "Unpainted casing",
@@ -86,7 +86,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Spring Balancers",
         subcategory: "Cleanroom",
         description: "Spring balancer designed for cleanroom environments with minimal particle generation.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/spring/product/erp/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/erp/erp_670_400.png",
         features: [
           "Cleanroom compatible",
           "Minimal particle generation",
@@ -117,7 +117,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Air Balancers",
         subcategory: "Standard",
         description: "Pneumatic air balancer for precise positioning of heavy loads in assembly lines and manufacturing.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/ewf/ewf02_670_400.png",
         features: [
           "Precise load positioning",
           "Weight-less handling",
@@ -141,7 +141,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Air Balancers",
         subcategory: "Tool Balancer",
         description: "Compact air balancer for suspending pneumatic tools with zero-gravity operation.",
-        image: "https://www.endo-kogyo.co.jp/english/product/balancer/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/balancer/spring/product/ewf/EWF03_670_400.png",
         features: [
           "Tool suspension",
           "Zero-gravity operation",
@@ -172,7 +172,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Retractors",
         subcategory: "Torque Reel",
         description: "Spring-driven torque reel for power tool supply and cable management in assembly lines.",
-        image: "https://www.endo-kogyo.co.jp/english/product/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/air-balancer/balance/magical_balancer/standard_and_short_en.jpg",
         features: [
           "Spring-driven retraction",
           "Adjustable tension",
@@ -196,7 +196,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Retractors",
         subcategory: "EV Retractor",
         description: "Smart cable retractor for EV charging stations to keep cables organized and prevent accidents.",
-        image: "https://www.endo-kogyo.co.jp/english/product/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/air-balancer/balance/magical_balancer/edb_feature1_en.jpg",
         features: [
           "EV charger cable management",
           "Automatic retraction",
@@ -227,7 +227,7 @@ export const endoKogyoCategories: BrandProductCategory[] = [
         category: "Magical Balancer",
         subcategory: "Zero Gravity",
         description: "New smart balancer with zero-gravity technology for effortless heavy load handling in factories.",
-        image: "https://www.endo-kogyo.co.jp/english/product/index.html",
+        image: "https://www.endo-kogyo.co.jp/images/product/air-balancer/balance/magical_balancer/edb_feature1_en.jpg",
         features: [
           "Zero-gravity operation",
           "Smart force sensing",

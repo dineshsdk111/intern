@@ -170,7 +170,7 @@ export default function BoschBrandPage() {
                     <div className="relative aspect-[4/3] overflow-hidden bg-surface">
                       <div
                         className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                        style={{ backgroundImage: `url('${tool.image}')` }}
+                        style={tool.image ? { backgroundImage: `url('${tool.image}')` } : undefined}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -217,7 +217,7 @@ export default function BoschBrandPage() {
             <div className="relative h-56 overflow-hidden">
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${selectedTool.image}')` }}
+                style={selectedTool.image ? { backgroundImage: `url('${selectedTool.image}')` } : undefined}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
               <button

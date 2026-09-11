@@ -15,7 +15,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Drill Drivers",
         description:
           "Compact 18V cordless drill driver with brushless motor for drilling and driving in wood, metal and masonry.",
-        image: "/images/bosch/gsb-18v-55.png",
         features: [
           "18V brushless motor",
           "20+1 torque settings",
@@ -40,7 +39,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Impact Drivers",
         description:
           "Compact and powerful 18V impact driver for fast driving of screws and bolts in construction applications.",
-        image: "/images/bosch/gdr-18v-50.jpg",
         features: [
           "18V brushless motor",
           "180 Nm max torque",
@@ -65,7 +63,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Cordless rotary hammer with SDS plus system for drilling in concrete and masonry without the hassle of cords.",
-        image: "/images/bosch/ghs-18v-50.jpg",
         features: [
           "SDS plus tool-free chuck",
           "3 modes: rotary hammer, rotation only, chisel only",
@@ -90,7 +87,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "Cordless angle grinder with paddle switch for cutting, grinding and surface preparation on the jobsite.",
-        image: "/images/bosch/gws-18v-50.jpg",
         features: [
           "115mm disc diameter",
           "Paddle switch design",
@@ -114,7 +110,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Circular Saws",
         description:
           "Cordless circular saw for fast, accurate cuts in wood and sheet materials with corded-like performance.",
-        image: "/images/bosch/gks-18v-50.jpg",
         features: [
           "165mm blade diameter",
           "56mm cutting depth at 90°",
@@ -139,7 +134,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Combo Kits",
         description:
           "2-piece 18V cordless combo kit with drill driver and impact driver for comprehensive drilling and fastening.",
-        image: "/images/bosch/gpk-18v-2.jpg",
         features: [
           "Includes drill driver and impact driver",
           "2x 18V 2.0Ah batteries",
@@ -171,7 +165,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Professional SDS plus rotary hammer with 3-mode operation for drilling, chipping and rotary hammering in concrete.",
-        image: "/images/bosch/gbh-2-28-f.png",
         features: [
           "SDS plus chuck system",
           "2.7 J impact energy",
@@ -196,7 +189,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Demolition Hammers",
         description:
           "Heavy-duty SDS max demolition hammer for breaking concrete, masonry and heavy demolition work.",
-        image: "/images/bosch/gbh-5-40-dce.jpg",
         features: [
           "SDS max tool system",
           "12.5 J impact energy",
@@ -219,7 +211,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Chipping Hammers",
         description:
           "Versatile SDS plus rotary hammer for drilling and light chipping in concrete, brick and stone.",
-        image: "/images/bosch/gbh-2-26.jpg",
         features: [
           "SDS plus chuck",
           "2.0 J impact energy",
@@ -243,7 +234,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Premium SDS plus rotary hammer with quick-change chuck for drilling, hammering and chiseling versatility.",
-        image: "/images/bosch/gbh-3-28-dfr.svg",
         features: [
           "SDS plus and keyless chuck",
           "3.0 J impact energy",
@@ -276,7 +266,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "Compact and lightweight 7-inch angle grinder for powerful grinding, cutting and surface preparation.",
-        image: "/images/bosch/gws-7-125.png",
         features: [
           "125mm disc diameter",
           "720W motor power",
@@ -301,7 +290,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "Professional 5-inch angle grinder with variable speed and soft start for controlled material removal.",
-        image: "/images/bosch/gws-9-125.jpg",
         features: [
           "125mm disc diameter",
           "900W motor power",
@@ -326,7 +314,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "High-performance 5-inch angle grinder with 1300W motor for demanding industrial cutting and grinding.",
-        image: "/images/bosch/gws-13-125.jpg",
         features: [
           "125mm disc diameter",
           "1300W motor power",
@@ -359,7 +346,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Handheld Circular Saws",
         description:
           "Powerful 165mm circular saw with dust extraction and cut-depth indicator for precise wood cutting.",
-        image: "/images/bosch/gks-65-gce.jpg",
         features: [
           "165mm blade diameter",
           "1,400W motor power",
@@ -384,7 +370,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Plunge Saws",
         description:
           "Precision plunge saw for clean, splinter-free cuts in sheet materials and panel goods.",
-        image: "/images/bosch/gkt-55-gce.svg",
         features: [
           "165mm blade diameter",
           "Plunge cut capability",
@@ -409,7 +394,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Track Saws",
         description:
           "Cordless track saw for precise, repeatable cuts with Bosch guide rail system on the jobsite.",
-        image: "/images/bosch/gkt-18v-52.jpg",
         features: [
           "165mm blade diameter",
           "Guide rail compatible",
@@ -442,7 +426,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Laser Distance Meters",
         description:
           "Professional laser distance meter with tilt sensor for accurate distance, area and volume measurements.",
-        image: "/images/bosch/glm-80.png",
         features: [
           "80m measuring range",
           "1.5mm accuracy",
@@ -467,7 +450,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Digital Levels",
         description:
           "Electronic digital level with illuminated display for precise angle measurements and alignment.",
-        image: "/images/bosch/gts-10-02-pro.svg",
         features: [
           "10\" (250mm) length",
           "Illuminated digital display",
@@ -492,7 +474,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Thermal Cameras",
         description:
           "Compact thermal camera for detecting temperature differences in building inspection and maintenance.",
-        image: "/images/bosch/gdt-3.svg",
         features: [
           "160x120 pixel resolution",
           "Temperature range -10°C to 300°C",
@@ -517,7 +498,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Tape Measures",
         description:
           "Digital tape measure with laser for precise distance measurements up to 8 meters.",
-        image: "/images/bosch/gcm-8-sc.svg",
         features: [
           "8m measuring range",
           "Laser for long distances",
@@ -550,7 +530,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Drill Bits",
         description:
           "5-piece SDS plus drill bit set for drilling in concrete, brick and masonry with rotary hammers.",
-        image: "/images/bosch/drill-bit-set.svg",
         features: [
           "5-piece set",
           "SDS plus shank",
@@ -573,7 +552,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Saw Blades",
         description:
           "Premium 254mm circular saw blade for clean, fast cuts in softwood, hardwood and panel materials.",
-        image: "/images/bosch/saw-blade.svg",
         features: [
           "254mm diameter",
           "48 teeth",
@@ -597,7 +575,6 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Cutting & Grinding Discs",
         description:
           "Multi-purpose cutting disc set for metal, stainless steel and stone cutting applications.",
-        image: "/images/bosch/cutting-disc.svg",
         features: [
           "115mm diameter",
           "Set of 10 discs",

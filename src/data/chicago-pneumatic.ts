@@ -5,7 +5,7 @@ export interface BrandProduct {
   category: string;
   subcategory: string;
   description: string;
-  image: string;
+  image?: string;
   features: string[];
   specifications?: Record<string, string>;
 }

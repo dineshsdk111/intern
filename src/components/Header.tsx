@@ -45,18 +45,18 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-10">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+919876543210"
+              href="tel:+919363029940"
               className="flex items-center gap-1.5 hover:text-accent transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>+91 98765 43210</span>
+              <span>+91 93630 29940</span>
             </a>
             <a
-              href="mailto:info@apexindustrial.in"
+              href="mailto:toollink@zohomail.in"
               className="flex items-center gap-1.5 hover:text-accent transition-colors hidden sm:flex"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>info@apexindustrial.in</span>
+              <span>toollink@zohomail.in</span>
             </a>
           </div>
           <div className="flex items-center gap-1.5 text-white/70">
@@ -77,10 +77,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-tight">
             <span className="text-xl lg:text-2xl font-extrabold text-navy tracking-tight">
-              APEX
+              Toollink
             </span>
             <span className="text-[10px] lg:text-xs font-medium text-charcoal-light tracking-widest uppercase">
-              Industrial Solutions
+              Enterprises
             </span>
           </Link>
 

@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Apex Industrial Solutions for industrial tools, equipment and engineering product enquiries.",
+    "Get in touch with Toollink Enterprises for industrial tools, equipment and engineering product enquiries.",
 };
 
 export default function ContactPage() {

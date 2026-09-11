@@ -42,7 +42,7 @@ export default function About() {
               Engineering Excellence Since 2011
             </h2>
             <p className="text-text-secondary leading-relaxed mb-4">
-              Apex Industrial Solutions is a Chennai-based industrial equipment
+              Toollink Enterprises is a Chennai-based industrial equipment
               supplier providing reliable tools, machinery and engineering
               products to manufacturing, automotive, construction and
               maintenance industries.

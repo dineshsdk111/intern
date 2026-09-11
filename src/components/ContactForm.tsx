@@ -24,7 +24,7 @@ export default function ContactForm() {
               Get In Touch
             </h2>
             <p className="text-text-secondary mb-8">
-              Apex Industrial Solutions
+              Toollink Enterprises
             </p>
 
             <div className="space-y-5 mb-8">
@@ -35,9 +35,12 @@ export default function ContactForm() {
                 <div>
                   <div className="font-semibold text-navy mb-0.5">Address</div>
                   <p className="text-sm text-text-secondary">
-                    No. 24, Industrial Estate Road,
+                    39/Adinagar, Ambattur,
                     <br />
-                    Guindy, Chennai, Tamil Nadu – 600032
+                    Chennai, Tamil Nadu - 600053
+                  </p>
+                  <p className="text-xs text-text-muted mt-1">
+                    GSTIN: 33FKLPAS955G1Z3 | State: 33 - Tamil Nadu
                   </p>
                 </div>
               </div>
@@ -49,10 +52,10 @@ export default function ContactForm() {
                 <div>
                   <div className="font-semibold text-navy mb-0.5">Phone</div>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919363029940"
                     className="text-sm text-text-secondary hover:text-accent transition-colors"
                   >
-                    +91 98765 43210
+                    +91 93630 29940
                   </a>
                 </div>
               </div>
@@ -64,10 +67,10 @@ export default function ContactForm() {
                 <div>
                   <div className="font-semibold text-navy mb-0.5">Email</div>
                   <a
-                    href="mailto:info@apexindustrial.in"
+                    href="mailto:toollink@zohomail.in"
                     className="text-sm text-text-secondary hover:text-accent transition-colors"
                   >
-                    info@apexindustrial.in
+                    toollink@zohomail.in
                   </a>
                 </div>
               </div>
@@ -94,7 +97,7 @@ export default function ContactForm() {
               <div className="text-center text-text-muted">
                 <MapPin className="w-10 h-10 mx-auto mb-2 opacity-50" />
                 <p className="text-sm font-medium">Google Maps</p>
-                <p className="text-xs">Guindy, Chennai</p>
+                <p className="text-xs">Ambattur, Chennai</p>
               </div>
             </div>
           </div>

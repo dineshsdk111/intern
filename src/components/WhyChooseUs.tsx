@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
             Why Us
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-            Why Choose Apex?
+            Why Choose Toollink?
           </h2>
         </div>
 

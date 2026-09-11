@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Industries We Serve",
   description:
-    "Apex Industrial Solutions serves automotive, manufacturing, construction, oil & gas, engineering and maintenance industries.",
+    "Toollink Enterprises serves automotive, manufacturing, construction, oil & gas, engineering and maintenance industries.",
 };
 
 const icons = [Car, Factory, HardHat, Flame, Cog, Wrench];

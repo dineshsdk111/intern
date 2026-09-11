@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Apex Industrial Solutions - Chennai-based industrial equipment supplier providing tools, machinery and engineering products since 2011.",
+    "Learn about Toollink Enterprises - Chennai-based industrial equipment supplier providing tools, machinery and engineering products.",
 };
 
 const values = [
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
-                Apex Industrial Solutions was established in 2011 in Chennai, Tamil Nadu, with a clear vision: to become a trusted supplier of industrial tools, machinery and engineering products for businesses across India.
+                Toollink Enterprises is based in Ambattur, Chennai, with a clear vision: to become a trusted supplier of industrial tools, machinery and engineering products for businesses across India.
               </p>
               <p className="text-text-secondary leading-relaxed mb-4">
                 Over the years, we have built strong relationships with leading manufacturers and have earned the trust of over 1,200 customers across various industries including automotive, manufacturing, construction and maintenance.

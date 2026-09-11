@@ -18,6 +18,7 @@ const productLinks = [
   { label: "Pneumatic Tools", href: "/products/pneumatic-tools" },
   { label: "Hydraulic Equipment", href: "/products/hydraulic-equipment" },
   { label: "Power Tools", href: "/products/power-tools" },
+  { label: "Makita Tools", href: "/products/makita-tools" },
   { label: "Measuring Instruments", href: "/products/measuring-instruments" },
   { label: "Workshop Equipment", href: "/products/workshop-equipment" },
 ];

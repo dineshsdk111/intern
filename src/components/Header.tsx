@@ -15,6 +15,7 @@ const navLinks = [
       { label: "Torque Wrenches", href: "/products/torque-wrenches" },
       { label: "Pneumatic Tools", href: "/products/pneumatic-tools" },
       { label: "Power Tools", href: "/products/power-tools" },
+      { label: "Makita Tools", href: "/products/makita-tools" },
       { label: "Hydraulic Equipment", href: "/products/hydraulic-equipment" },
       { label: "Industrial Pumps", href: "/products/industrial-pumps" },
       { label: "Measuring Instruments", href: "/products/measuring-instruments" },

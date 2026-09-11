@@ -20,6 +20,39 @@ export interface ProductCategory {
   products: Product[];
 }
 
+const makitaProducts: Product[] = [
+  {
+    slug: "makita-cordless-tower-light-ml014g",
+    name: "Makita Cordless Tower Light",
+    category: "Makita Tools",
+    description: "Portable 40V XGT cordless tower light for bright, flexible illumination on demanding worksites.",
+    image: "https://makita.in/wp-content/uploads/2026/08/ML014G_PR_IMG.jpg",
+    model: "ML014G",
+    features: ["40V XGT cordless platform", "Portable tower design", "Bright LED work lighting"],
+    applications: ["Construction sites", "Industrial maintenance", "Workshop lighting"],
+  },
+  {
+    slug: "makita-cordless-circular-saw-hs014g",
+    name: "Makita Cordless Circular Saw",
+    category: "Makita Tools",
+    description: "High-performance 40V XGT cordless circular saw for accurate cutting across professional applications.",
+    image: "https://makita.in/wp-content/uploads/2026/08/HS014_PR_IMG.jpg",
+    model: "HS014G",
+    features: ["40V XGT cordless platform", "Powerful brushless motor", "Clean and accurate cutting"],
+    applications: ["Timber cutting", "Construction work", "Carpentry workshops"],
+  },
+  {
+    slug: "makita-cordless-lawn-mower-dlm540",
+    name: "Makita Cordless Lawn Mower",
+    category: "Makita Tools",
+    description: "Cordless lawn mower designed for efficient, low-noise cutting and dependable outdoor maintenance.",
+    image: "https://makita.in/wp-content/uploads/2026/07/DLM540_Pr_Img.jpg",
+    model: "DLM540",
+    features: ["Cordless battery operation", "Quiet outdoor operation", "Efficient cutting performance"],
+    applications: ["Landscape maintenance", "Facility grounds", "Commercial outdoor areas"],
+  },
+];
+
 export const productCategories: ProductCategory[] = [
   {
     slug: "torque-wrenches",
@@ -208,6 +241,14 @@ export const productCategories: ProductCategory[] = [
         },
       },
     ],
+  },
+  {
+    slug: "makita-tools",
+    name: "Makita Tools",
+    description: "Professional Makita cordless tools for construction, maintenance, cutting and outdoor applications.",
+    image: "https://makita.in/wp-content/uploads/2026/08/HS014_PR_IMG.jpg",
+    heroImage: "https://makita.in/wp-content/uploads/2026/08/HS014_PR_IMG.jpg",
+    products: makitaProducts,
   },
   {
     slug: "power-tools",

@@ -54,7 +54,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Impact Wrenches",
         description: "1\" drive heavy-duty impact wrench designed for truck tire service and heavy equipment maintenance.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/2541/273199/T019139__48864.1764142975.jpg?c=2",
         features: [
           "1\" square drive",
           "Rocking dog clutch",
@@ -78,7 +78,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Cordless Tools",
         subcategory: "Battery Torque Wrenches",
         description: "Battery-powered torque wrenches for heavy vehicle maintenance with digital torque control.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/150951/273074/6151570090__11891.1763985648.jpg?c=2",
         features: [
           "Battery operated cordless design",
           "Digital torque display",
@@ -108,7 +108,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Grinders",
         description: "Robust industrial angle grinder for heavy-duty grinding, cutting and surface preparation.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/68850/272671/CP3450-12AB5_TOOL__04290.1762849341.jpg?c=2",
         features: [
           "Composite housing",
           "Safety throttle lever",
@@ -132,7 +132,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Die Grinders",
         description: "Compact air die grinder for precision grinding, deburring and finishing work.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/133361/211722/211722__09016.1709418739.jpg?c=2",
         features: [
           "1/4\" collet capacity",
           "Compact design",
@@ -163,7 +163,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Drills",
         description: "Heavy-duty pistol grip drill for industrial drilling applications in metal and other materials.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/68874/236459/cq5dam.web.950.950__15482.1763452261.jpg?c=2",
         features: [
           "1/2\" chuck capacity",
           "Variable speed trigger",
@@ -194,7 +194,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Sanders",
         description: "Professional random orbital sander for automotive body work and surface finishing.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/132832/236795/cq5dam.web.950.950__46739.1636641879.jpg?c=2",
         features: [
           "5-inch pad diameter",
           "Variable speed control",
@@ -225,7 +225,7 @@ export const chicagoPneumaticCategories: BrandProductCategory[] = [
         category: "Pneumatic Tools",
         subcategory: "Percussive Tools",
         description: "Heavy-duty chipping hammer for weld removal, surface preparation and light demolition.",
-        image: "https://www.thanviagencies.in/wp-content/uploads/2021/10/b2.png",
+        image: "https://cdn11.bigcommerce.com/s-13fb4/images/stencil/500x659/products/165219/271954/CP_4123_b__29877.1761373533.jpg?c=2",
         features: [
           "Bulb-type handle",
           "Built-in blow-out trigger",

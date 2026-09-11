@@ -120,15 +120,15 @@ export const productCategories: ProductCategory[] = [
     slug: "pneumatic-tools",
     name: "Pneumatic Tools",
     description: "High-performance air-powered tools for industrial applications.",
-    image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
-    heroImage: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=1200&q=80",
+    image: "/pneumatic-tools.jpg.jpeg",
+    heroImage: "/pneumatic-tools.jpg.jpeg",
     products: [
       {
         slug: "pneumatic-impact-wrench-aiw-750",
         name: "Heavy Duty Pneumatic Impact Wrench",
         category: "Pneumatic Tools",
         description: "High-torque impact wrench for demanding industrial bolting applications.",
-        image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80",
+        image: "/pneumatic-tools.jpg.jpeg",
         model: "AIW-750",
         features: [
           "Maximum torque 750 Nm",

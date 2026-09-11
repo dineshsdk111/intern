@@ -85,7 +85,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
-                39/Adinagar, Ambattur, Chennai, Tamil Nadu - 600053
+                39/A Indira Nagar, Ambattur, Chennai - 600053
               </li>
               <li>
                 <a

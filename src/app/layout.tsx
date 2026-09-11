@@ -12,11 +12,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Toollink Enterprises | Industrial Tools & Engineering Products",
+    default: "Toollink Enterprises | Industrial Tools & Engineering Solutions",
     template: "%s | Toollink Enterprises",
   },
   description:
-    "Chennai-based industrial equipment supplier providing high-quality tools, pneumatic equipment, hydraulic systems and engineering solutions to manufacturing, automotive, construction and maintenance industries.",
+    "Toollink Enterprises provides industrial tools, pneumatic equipment, hydraulic systems, power tools and engineering solutions in Chennai, Tamil Nadu.",
   keywords: [
     "industrial tools",
     "pneumatic tools",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "industrial equipment India",
   ],
   openGraph: {
-    title: "Toollink Enterprises | Powering Industry with Precision & Reliability",
+    title: "Toollink Enterprises | Industrial Tools & Engineering Solutions",
     description:
-      "Your trusted partner for high-quality industrial tools, pneumatic equipment, hydraulic systems and engineering solutions.",
+      "Toollink Enterprises provides industrial tools, pneumatic equipment, hydraulic systems, power tools and engineering solutions in Chennai, Tamil Nadu.",
     url: "https://apexindustrial.in",
     siteName: "Toollink Enterprises",
     locale: "en_IN",

@@ -35,12 +35,12 @@ export default function ContactForm() {
                 <div>
                   <div className="font-semibold text-navy mb-0.5">Address</div>
                   <p className="text-sm text-text-secondary">
-                    39/Adinagar, Ambattur,
+                    39/A Indira Nagar, Ambattur
                     <br />
-                    Chennai, Tamil Nadu - 600053
+                    Chennai - 600053
                   </p>
                   <p className="text-xs text-text-muted mt-1">
-                    GSTIN: 33FKLPAS955G1Z3 | State: 33 - Tamil Nadu
+                    GSTIN: 33FKLPA5955G1Z3 | State: 33 - Tamil Nadu
                   </p>
                 </div>
               </div>

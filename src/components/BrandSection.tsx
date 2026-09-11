@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { X, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { brands } from "@/data/brands";
 
 export default function BrandSection() {
-  const [active, setActive] = useState<number | null>(null);
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -33,30 +32,18 @@ export default function BrandSection() {
 
         {/* Brand Cards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-          {brands.map((brand, i) => {
-            const isMakita = brand.slug === "makita";
-            return (
+          {brands.map((brand, i) => (
               <div
                 key={brand.slug}
                 className="group relative"
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
               >
-                {isMakita ? (
-                  <Link href="/brands/makita" className="block">
-                    <BrandCard brand={brand} i={i} hovered={hovered} />
-                  </Link>
-                ) : (
-                  <div
-                    className="cursor-pointer"
-                    onClick={() => setActive(i)}
-                  >
-                    <BrandCard brand={brand} i={i} hovered={hovered} />
-                  </div>
-                )}
+              <Link href={`/brands/${brand.slug}`} className="block">
+                <BrandCard brand={brand} i={i} hovered={hovered} />
+              </Link>
               </div>
-            );
-          })}
+          ))}
         </div>
 
         {/* CTA */}
@@ -70,82 +57,6 @@ export default function BrandSection() {
           </a>
         </div>
       </div>
-
-      {/* Brand Detail Modal (non-Makita brands) */}
-      {active !== null && (
-        <div
-          className="fixed inset-0 z-[9999] bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
-          onClick={() => setActive(null)}
-        >
-          <div
-            className="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Image */}
-            <div className="relative h-52 overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('${brands[active].logo}')` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
-              <button
-                className="absolute top-4 right-4 w-9 h-9 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                onClick={() => setActive(null)}
-              >
-                <X className="w-5 h-5" />
-              </button>
-              <div className="absolute bottom-4 left-5 right-5">
-                <span className="text-[11px] font-bold text-accent uppercase tracking-wider bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                  {brands[active].specialty}
-                </span>
-                <h3 className="text-2xl font-extrabold text-white mt-2">
-                  {brands[active].name}
-                </h3>
-              </div>
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-6">
-              <p className="text-sm text-accent font-semibold italic mb-3">
-                &ldquo;{brands[active].tagline}&rdquo;
-              </p>
-              <p className="text-text-secondary leading-relaxed mb-6">
-                {brands[active].description}
-              </p>
-
-              {/* Navigation dots */}
-              <div className="flex items-center justify-between">
-                <div className="flex gap-2">
-                  {brands.map((_, idx) => (
-                    <button
-                      key={idx}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        idx === active ? "bg-accent w-6" : "bg-gray-300 hover:bg-gray-400"
-                      }`}
-                      onClick={() => setActive(idx)}
-                    />
-                  ))}
-                </div>
-
-                <div className="flex gap-2">
-                  <button
-                    className="w-9 h-9 border border-gray-200 rounded-lg flex items-center justify-center text-charcoal hover:bg-surface transition-colors"
-                    onClick={() => setActive(active > 0 ? active - 1 : brands.length - 1)}
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                  </button>
-                  <button
-                    className="w-9 h-9 border border-gray-200 rounded-lg flex items-center justify-center text-charcoal hover:bg-surface transition-colors"
-                    onClick={() => setActive(active < brands.length - 1 ? active + 1 : 0)}
-                  >
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

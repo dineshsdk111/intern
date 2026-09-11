@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { brands } from "@/data/brands";
 
 export default function BrandsPageContent() {
-  const [active, setActive] = useState<number | null>(null);
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -30,113 +29,21 @@ export default function BrandsPageContent() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {brands.map((brand, i) => {
-              const isMakita = brand.slug === "makita";
-              return (
+            {brands.map((brand, i) => (
                 <div
                   key={brand.slug}
                   className="group relative"
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}
                 >
-                  {isMakita ? (
-                    <Link href="/brands/makita" className="block">
-                      <BrandCard brand={brand} i={i} hovered={hovered} />
-                    </Link>
-                  ) : (
-                    <div
-                      className="cursor-pointer"
-                      onClick={() => setActive(i)}
-                    >
-                      <BrandCard brand={brand} i={i} hovered={hovered} />
-                    </div>
-                  )}
+              <Link href={`/brands/${brand.slug}`} className="block">
+                <BrandCard brand={brand} i={i} hovered={hovered} />
+              </Link>
                 </div>
-              );
-            })}
+          ))}
           </div>
         </div>
       </section>
-
-      {/* Brand Detail Modal */}
-      {active !== null && (
-        <div
-          className="fixed inset-0 z-[9999] bg-navy/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
-          onClick={() => setActive(null)}
-        >
-          <div
-            className="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Modal Image */}
-            <div className="relative h-56 overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
-                style={{
-                  backgroundImage: `url('${brands[active].logo}')`,
-                  transform: "scale(1.1)",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
-              <button
-                className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-                onClick={() => setActive(null)}
-              >
-                <X className="w-5 h-5" />
-              </button>
-              <div className="absolute bottom-5 left-6 right-6">
-                <span className="inline-block text-[11px] font-bold text-accent uppercase tracking-wider bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full mb-2">
-                  {brands[active].specialty}
-                </span>
-                <h3 className="text-2xl font-extrabold text-white">
-                  {brands[active].name}
-                </h3>
-              </div>
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-6">
-              <p className="text-base text-accent font-semibold italic mb-3">
-                &ldquo;{brands[active].tagline}&rdquo;
-              </p>
-              <p className="text-text-secondary leading-relaxed mb-6">
-                {brands[active].description}
-              </p>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <div className="flex gap-2">
-                  {brands.map((_, idx) => (
-                    <button
-                      key={idx}
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        idx === active
-                          ? "bg-accent w-7"
-                          : "bg-gray-200 hover:bg-gray-300 w-2"
-                      }`}
-                      onClick={() => setActive(idx)}
-                    />
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    className="w-10 h-10 border border-gray-200 rounded-xl flex items-center justify-center text-charcoal hover:bg-surface hover:border-accent/30 transition-all"
-                    onClick={() => setActive(active > 0 ? active - 1 : brands.length - 1)}
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    className="w-10 h-10 border border-gray-200 rounded-xl flex items-center justify-center text-charcoal hover:bg-surface hover:border-accent/30 transition-all"
-                    onClick={() => setActive(active < brands.length - 1 ? active + 1 : 0)}
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

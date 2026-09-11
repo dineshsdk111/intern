@@ -9,7 +9,7 @@ export default function BrandSection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-surface relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-accent/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy/5 rounded-full translate-x-1/3 translate-y-1/3" />
@@ -31,18 +31,18 @@ export default function BrandSection() {
         </div>
 
         {/* Brand Cards Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {brands.map((brand, i) => (
-              <div
-                key={brand.slug}
-                className="group relative"
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
-              >
+            <div
+              key={brand.slug}
+              className="group relative"
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+            >
               <Link href={`/brands/${brand.slug}`} className="block">
                 <BrandCard brand={brand} i={i} hovered={hovered} />
               </Link>
-              </div>
+            </div>
           ))}
         </div>
 
@@ -74,35 +74,44 @@ function BrandCard({
     <div
       className={`relative bg-white rounded-2xl border overflow-hidden transition-all duration-500 ${
         hovered === i
-          ? "border-accent/30 shadow-xl shadow-accent/10 scale-[1.03]"
-          : "border-gray-100 shadow-sm hover:shadow-md"
+          ? "border-accent/40 shadow-2xl shadow-accent/15 scale-[1.04]"
+          : "border-gray-100 shadow-md hover:shadow-lg"
       }`}
     >
-      {/* Logo Image */}
-      <div className="relative h-36 overflow-hidden bg-gradient-to-br from-navy/5 to-surface">
+      {/* Logo Image - Larger and clearer */}
+      <div className="relative h-48 overflow-hidden bg-gradient-to-br from-white via-surface to-white">
         <div
-          className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+          className="absolute inset-0 bg-cover bg-center transition-all duration-700 p-4"
           style={{
             backgroundImage: `url('${brand.logo}')`,
-            filter: hovered === i ? "none" : "grayscale(60%)",
-            opacity: hovered === i ? 1 : 0.7,
-            transform: hovered === i ? "scale(1.1)" : "scale(1)",
+            filter: "none",
+            opacity: hovered === i ? 1 : 0.9,
+            transform: hovered === i ? "scale(1.08)" : "scale(1)",
           }}
         />
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+
+        {/* Hover glow effect */}
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${
+            hovered === i ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            background:
+              "radial-gradient(circle at center, rgba(220,38,38,0.08) 0%, transparent 70%)",
+          }}
+        />
 
         {/* Hover shine effect */}
         <div
-          className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 ${
+          className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 ${
             hovered === i ? "translate-x-full" : "-translate-x-full"
           }`}
         />
       </div>
 
       {/* Content */}
-      <div className="px-4 pb-5 -mt-4 relative">
-        <div className="flex items-center gap-2 mb-1.5">
+      <div className="px-5 pb-5 text-center">
+        <div className="flex items-center justify-center gap-2 mb-2">
           <span
             className={`w-2 h-2 rounded-full transition-colors duration-300 ${
               hovered === i ? "bg-accent" : "bg-gray-300"
@@ -112,17 +121,23 @@ function BrandCard({
             {brand.specialty}
           </span>
         </div>
-        <h3 className="text-base font-bold text-navy mb-0.5 group-hover:text-accent transition-colors">
+        <h3
+          className={`text-lg font-bold mb-1 transition-colors duration-300 ${
+            hovered === i ? "text-accent" : "text-navy"
+          }`}
+        >
           {brand.name}
         </h3>
-        <p className="text-xs text-accent font-medium italic">
+        <p className="text-xs text-accent font-medium italic mb-3">
           {brand.tagline}
         </p>
 
         {/* Explore link */}
         <div
-          className={`flex items-center gap-1 mt-3 text-xs font-semibold text-accent transition-all duration-300 ${
-            hovered === i ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+          className={`flex items-center justify-center gap-1 text-xs font-semibold text-accent transition-all duration-300 ${
+            hovered === i
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2"
           }`}
         >
           Explore Brand

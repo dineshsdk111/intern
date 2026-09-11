@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import About from "@/components/About";
-import ProductGrid from "@/components/ProductGrid";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import BrandSection from "@/components/BrandSection";
 import IndustrySection from "@/components/IndustrySection";
@@ -17,9 +16,8 @@ export default function Home() {
       <Hero />
       <Stats />
       <About />
-      <ProductGrid />
-      <FeaturedProducts />
       <BrandSection />
+      <FeaturedProducts />
       <IndustrySection />
       <WhyChooseUs />
       <ProcessSection />

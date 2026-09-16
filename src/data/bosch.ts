@@ -276,6 +276,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "Compact and lightweight 7-inch angle grinder for powerful grinding, cutting and surface preparation.",
+        image: "/images/bosch/gws-7-125.png",
         features: [
           "125mm disc diameter",
           "720W motor power",

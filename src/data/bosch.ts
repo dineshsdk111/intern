@@ -139,6 +139,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Combo Kits",
         description:
           "2-piece 18V cordless combo kit with drill driver and impact driver for comprehensive drilling and fastening.",
+        image: "/images/bosch/gpk-18v-2.png",
         features: [
           "Includes drill driver and impact driver",
           "2x 18V 2.0Ah batteries",

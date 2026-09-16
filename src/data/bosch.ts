@@ -196,6 +196,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Demolition Hammers",
         description:
           "Heavy-duty SDS max demolition hammer for breaking concrete, masonry and heavy demolition work.",
+        image: "/images/bosch/gbh-5-40-dce.png",
         features: [
           "SDS max tool system",
           "12.5 J impact energy",

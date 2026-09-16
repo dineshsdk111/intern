@@ -65,6 +65,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Cordless rotary hammer with SDS plus system for drilling in concrete and masonry without the hassle of cords.",
+        image: "/images/bosch/ghs-18v-50.png",
         features: [
           "SDS plus tool-free chuck",
           "3 modes: rotary hammer, rotation only, chisel only",

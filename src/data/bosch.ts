@@ -171,6 +171,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Professional SDS plus rotary hammer with 3-mode operation for drilling, chipping and rotary hammering in concrete.",
+        image: "/images/bosch/gbh-2-28-f.png",
         features: [
           "SDS plus chuck system",
           "2.7 J impact energy",

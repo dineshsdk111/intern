@@ -219,6 +219,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Chipping Hammers",
         description:
           "Versatile SDS plus rotary hammer for drilling and light chipping in concrete, brick and stone.",
+        image: "/images/bosch/gbh-2-26.png",
         features: [
           "SDS plus chuck",
           "2.0 J impact energy",

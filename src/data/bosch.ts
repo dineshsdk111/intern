@@ -114,6 +114,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Circular Saws",
         description:
           "Cordless circular saw for fast, accurate cuts in wood and sheet materials with corded-like performance.",
+        image: "/images/bosch/gks-18v-50.png",
         features: [
           "165mm blade diameter",
           "56mm cutting depth at 90°",

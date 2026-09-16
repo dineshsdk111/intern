@@ -15,8 +15,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Drill Drivers",
         description:
           "Compact 18V cordless drill driver with brushless motor for drilling and driving in wood, metal and masonry.",
-        image:
-          "https://images.unsplash.com/photo-1581142841701-62d7f0ad0380?auto=format&fit=crop&w=900&q=80",
+        image: "/images/bosch/bosch-drill-driver.jpg",
         features: [
           "18V brushless motor",
           "20+1 torque settings",

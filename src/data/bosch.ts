@@ -40,6 +40,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Impact Drivers",
         description:
           "Compact and powerful 18V impact driver for fast driving of screws and bolts in construction applications.",
+        image: "/images/bosch/bosch-impact.jpg",
         features: [
           "18V brushless motor",
           "180 Nm max torque",

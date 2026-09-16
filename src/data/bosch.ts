@@ -90,6 +90,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Angle Grinders",
         description:
           "Cordless angle grinder with paddle switch for cutting, grinding and surface preparation on the jobsite.",
+        image: "/images/bosch/gws-18v-50.png",
         features: [
           "115mm disc diameter",
           "Paddle switch design",

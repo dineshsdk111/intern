@@ -243,6 +243,7 @@ export const boschCategories: BrandProductCategory[] = [
         subcategory: "Rotary Hammers",
         description:
           "Premium SDS plus rotary hammer with quick-change chuck for drilling, hammering and chiseling versatility.",
+        image: "/images/bosch/gbh-3-28-dfr.png",
         features: [
           "SDS plus and keyless chuck",
           "3.0 J impact energy",

@@ -37,7 +37,7 @@ export default function AboutPage() {
             About Us
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Engineering Excellence Since 2011
+            Engineering Excellence Since 2026
           </h1>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Building lasting partnerships through quality products, technical expertise and dependable service.

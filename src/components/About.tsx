@@ -39,7 +39,7 @@ export default function About() {
               About Us
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-navy leading-tight mb-6">
-              Engineering Excellence Since 2011
+              Engineering Excellence Since 2026
             </h2>
             <p className="text-text-secondary leading-relaxed mb-4">
               Toollink Enterprises is a Chennai-based industrial equipment

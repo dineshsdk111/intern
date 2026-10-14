@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6 animate-fade-in-up opacity-0">
             <span className="w-2 h-2 bg-accent rounded-full" />
             <span className="text-sm font-medium text-white/90">
-              Trusted Since 2011
+              Engineering Excellence Since 2026
             </span>
           </div>
 

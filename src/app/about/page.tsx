@@ -74,10 +74,7 @@ export default function AboutPage() {
                     "url('https://images.unsplash.com/photo-1745921204896-c2011440a4e2?w=800&q=80')",
                 }}
               />
-              <div className="absolute -bottom-6 -left-6 bg-accent text-white rounded-xl p-5 shadow-lg">
-                <div className="text-3xl font-extrabold">15+</div>
-                <div className="text-sm font-medium text-white/90">Years of Excellence</div>
-              </div>
+              <div className="absolute -bottom-6 -left-6 bg-accent text-white rounded-xl p-5 shadow-lg opacity-0 pointer-events-none" aria-hidden="true" />
             </div>
           </div>
         </div>

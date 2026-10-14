@@ -5,44 +5,24 @@ import { X, ZoomIn } from "lucide-react";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1741827866663-6ad8ec20480c?w=800&q=80",
-    alt: "Industrial torque wrenches",
-    caption: "Torque Wrenches",
+    src: "/images/bosch/bosch-drill-driver.jpg",
+    alt: "Bosch drill driver",
+    caption: "Bosch Drill Driver",
   },
   {
-    src: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&q=80",
-    alt: "Pneumatic impact tools",
-    caption: "Pneumatic Tools",
+    src: "/images/bosch/bosch-impact.jpg",
+    alt: "Bosch impact drill",
+    caption: "Bosch Impact Drill",
   },
   {
-    src: "https://images.unsplash.com/photo-1592054286113-649ba108e968?w=800&q=80",
-    alt: "Cordless power drill",
-    caption: "Power Tools",
+    src: "/images/chicago-pneumatic/cp7748.png",
+    alt: "Chicago Pneumatic impact wrench",
+    caption: "Chicago Pneumatic",
   },
   {
-    src: "https://images.unsplash.com/photo-1610742805112-20134ceb40e8?w=800&q=80",
-    alt: "Hydraulic equipment pipes",
-    caption: "Hydraulic Systems",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1745571479548-7e8c708c4eb0?w=800&q=80",
-    alt: "Precision measuring instruments",
-    caption: "Measuring Instruments",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1773325076564-502be7dd4eba?w=800&q=80",
-    alt: "Workshop with tools and equipment",
-    caption: "Workshop Equipment",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1759688506129-9da70e74e9fa?w=800&q=80",
-    alt: "Industrial bolts and fasteners",
-    caption: "Industrial Fasteners",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
-    alt: "Engineer working with equipment",
-    caption: "Engineering Team",
+    src: "https://makita.in/wp-content/uploads/2026/08/HS014_PR_IMG.jpg",
+    alt: "Makita circular saw",
+    caption: "Makita Circular Saw",
   },
 ];
 

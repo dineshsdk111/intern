@@ -60,13 +60,7 @@ export default function Stats() {
   return (
     <section className="relative -mt-12 z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <StatItem
-            end={15}
-            suffix="+"
-            label="Years of Experience"
-            icon={<Award className="w-7 h-7 text-accent" />}
-          />
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
           <StatItem
             end={500}
             suffix="+"

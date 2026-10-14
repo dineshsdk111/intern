@@ -26,11 +26,6 @@ export default function About() {
                 }}
               />
             </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-4 sm:right-6 bg-accent text-white rounded-xl p-4 shadow-lg">
-              <div className="text-2xl font-extrabold">15+</div>
-              <div className="text-xs font-medium text-white/90">Years</div>
-            </div>
           </div>
 
           {/* Content */}
